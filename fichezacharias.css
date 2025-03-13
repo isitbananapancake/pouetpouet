@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloock&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+.ps_zach *::-webkit-scrollbar {
+  width: 3px;
+}
+
+.ps_zach *::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 5px;
+}
+
+.ps_zach *::-webkit-scrollbar-thumb {
+  background: var(--general2);
+  border-radius: 5px;  
+}
+
+.ps_zach, .ps_zach *{box-sizing:border-box; transition:all .6s ease; scrollbar-width:auto;}
+
+.ps_zach{  
+  --general:#ae141e;
+  --alter:#f3f3f3;
+  --z-gradient:linear-gradient(0deg,#ae141e61,#000000c4 40%); 
+  --z-gradientalter:linear-gradient(0deg,#f3f3f32e,#000000c4 40%); 
+  --general2:#ae141e;
+  --darkbg:#000;
+  --font-color:#f3f3f3;
+  --font:'Gloock';
+  
+  --head-img:url('https://i.imgur.com/t22E02j.png');
+  --infos-img:url('https://i.imgur.com/AIy0xq0.png');
+  
+  margin:auto;
+  max-width:1000px;
+  display:flex;
+  flex-direction:column;
+  position:relative;
+  align-items: center;
+  border-radius:10px;
+  overflow:hidden;
+  font-family:'Inter';
+  color:var(--font-color);
+  background:var(--darkbg);
+  font-size:14px;
+}
+
+.zach_headbg{
+  background-image:var(--head-img);
+  position:absolute;
+  inset:0 0 auto 0;
+  height:700px;
+  z-index:1;
+}
+
+.zach_head{
+  padding:20px;
+  height:650px;
+  display:flex;
+  position:relative;
+  z-index:2;
+  flex-direction:column;
+  font-family:var(--font);
+  text-transform:uppercase;    
+  justify-content: flex-end;
+  align-items: center;
+  color:white;
+  gap:0;
+}
+
+.zach_head span{
+  color:transparent;
+  background:var(--z-gradient);
+  -webkit-background-clip:text;
+  -webkit-text-stroke:1px var(--general);
+  font-size:160px;
+}
+
+.zach_head em{
+  letter-spacing:20px;
+  color:var(--alter);
+}
+
+input#z_ua1,input#z_ua2{display:none}
+
+.zach_labels{
+  position:relative;
+  z-index:2;
+}
+
+.zach_labels label{
+  cursor:pointer;
+}
+
+#z_ua2:checked ~ .ps_zach{
+  --general:#f3f3f3;
+  --alter:#ae141e;
+  --z-gradient:linear-gradient(0deg,#f3f3f32e,#000000c4 40%);
+  --z-gradientalter:linear-gradient(0deg,#ae141e61,#000000c4 40%);
+  --head-img:url('https://i.imgur.com/xHRU45x.png');
+  --infos-img:url('https://i.imgur.com/sprPXY9.png');
+}
+
+.zach_infos{
+  position:relative;
+  z-index:2;
+  width:100%;
+  display:grid;
+  grid-template-columns:55% auto;
+  padding:20px 50px;
+  gap:20px;
+}
+
+.zach_infos .left{
+  background:var(--z-gradient);
+  padding:20px;
+  border:1px solid var(--general);
+  text-align:justify;
+}
+
+.zach_infos .left .overflow{
+  height:300px;
+  overflow:auto;
+  padding-right:10px;
+}
+
+.zach_infos .right{
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+}
+
+.zach_infos .right span{
+  border-bottom:1px solid var(--general2);
+  padding:5px 50px 10px 5px;
+  text-transform:uppercase;
+  font-size:12px;
+  font-weight:bold;
+}
+
+.ps_zach c{
+  color:var(--general2);
+}
+
+.zach_facts{
+  border:1px solid var(--alter);
+  padding:20px;
+  margin-top:20px;
+  background:var(--z-gradientalter);
+}
+
+.zach_facts .overflow{
+  height:172px;
+  overflow:auto;
+  padding-right:10px;
+  text-align:justify;
+}
+
+.zach_labels{
+  display:flex;
+  padding:20px 0 0 0;
+  gap:20px;
+}
+
+.zach_labels label{
+  font-weight:bolder;
+  font-family:var(--font);
+  font-size:30px;
+  border-bottom:1px solid transparent; 
+  display:block;
+}
+
+#z_ua1:checked ~ .ps_zach .zach_labels #z_ua1{border-color:var(--general2);}
+#z_ua2:checked ~ .ps_zach .zach_labels #z_ua2{border-color:var(--general2);}
+
+.zach_labels #z_ua1{
+  color:var(--general);
+}
+
+.zach_labels #z_ua2{
+  color:var(--alter);
+}
+
+.zach_pages{
+  width:1000px;
+  height:640px;
+  background-image:var(--infos-img);
+  background-position:0 -30px;
+  position:relative;
+}
+
+.zach_page{
+  position:absolute;
+  inset:0;
+  display:grid;
+  grid-template-columns:280px 380px auto;
+  grid-template-rows:auto 70px;
+  padding:50px;
+  gap:20px;
+  z-index:-1;
+  opacity:0;
+}
+
+.zach_vrac{
+  background:var(--z-gradient);
+  border:1px solid var(--general);
+  padding:20px;
+  text-align:justify;
+}
+
+.zach_vrac .overflow{
+      height: 408px;
+    overflow: auto;
+  padding-right:10px;
+}
+
+.zach_quote{
+  grid-area:2 / 2 / 2 / 4;
+  display:flex;
+  font-family:'Playfair Display';
+  font-style:italic;
+  font-size:25px;
+  text-align:right;
+  color:var(--alter);
+  justify-content: flex-end;
+}
+
+.zach_infoua{
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+}
+
+.zach_infoua span{
+  border-bottom:1px solid var(--general2);
+  padding:10px 0;
+  text-transform:uppercase;
+  font-size:12px;
+  font-weight:bold;
+}
+
+#z_ua1:checked ~ .ps_zach .zach_pages #z_ua1,
+#z_ua2:checked ~ .ps_zach .zach_pages #z_ua2{opacity:1; z-index:3;}
