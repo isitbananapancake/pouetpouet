@@ -1,0 +1,128 @@
+@import url('https://fonts.cdnfonts.com/css/mirage-2');
+@import url('https://fonts.cdnfonts.com/css/love-moment-2');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Gloock&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+.eva_rp *{box-sizing:border-box}
+.eva_rp{
+  --general:#ad1d49;
+  --alter:#fa5068;  
+  --eheadimg:url('https://i.imgur.com/R9IUe0i.png');
+  --eicon:url('https://i.imgur.com/YFf8bOg.png');
+  
+  --darkbg:#151515;
+  --lightbg:#f3f3f3;
+  --gradient:linear-gradient(60deg,var(--general),var(--alter));
+      --font: "Inter";
+    --serif: "DM Serif Display";
+    --serif2: "";
+    --letter: "Love moment";
+  
+  width:1000px;
+  display:flex;
+  flex-direction:column;
+  background:var(--darkbg);
+  margin:auto;
+  font-family:var(--font);
+  color:var(--lightbg);
+  border-radius:10px;
+  overflow:hidden;
+}
+
+.eva_head{
+  background:var(--gradient);
+  position:relative;
+  height:230px;
+}
+
+.eva_headimg{
+  background-image:var(--eheadimg);
+  position:absolute;
+  inset:0;
+  filter:grayscale(1);
+  mix-blend-mode:multiply;
+  opacity:.2;
+}
+
+.eva_title{
+  display:flex;
+  background:var(--darkbg);
+  padding-left:50px;
+  border-bottom:40px solid;
+  border-image:var(--gradient) 1;
+}
+
+.eva_icon{
+  width:160px;
+  height:160px;
+  border:20px solid var(--darkbg);
+  transform:rotate(45deg);
+  position:relative;
+  overflow:hidden;
+  margin-top:-75px;
+}
+
+.eva_icon div{
+  background-image:var(--eicon);
+  position:absolute;
+  inset:-50%;
+  transform:rotate(-45deg);
+}
+
+.eva_titlef{
+  display:flex;
+  flex-direction:column;
+  position:relative;
+}
+
+.eva_titlef b{
+  font-size:150px;
+  font-family:var(--serif2);
+  font-style:italic;
+  margin:-90px 0 0 -40px;
+}
+
+.eva_titlef span{
+  text-transform:uppercase;
+  letter-spacing:10px;
+  margin:-30px 0 15px 0;
+}
+
+.eva_border{
+  background-image: conic-gradient(from var(--angle),var(--general),var(--alter),transparent 80%);
+  animation:rotate 6s normal linear infinite;
+  margin:100px;
+  position:relative;
+  border-radius:5px;
+}
+
+@property --angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes rotate{
+  0% {
+    --angle:0deg;
+  }
+  
+  100% {
+    --angle:-360deg;
+  }
+}
+
+.eva_rpt{
+  background:var(--darkbg);
+  padding:80px;
+  margin:1px;
+  border-radius:5px;
+  line-height:15px;
+  font-size:13px;
+  text-align:justify;
+}
+
+.eva_rpt b{
+  color:transparent;
+  background:var(--gradient);
+  -webkit-background-clip:text;
+}
