@@ -1,0 +1,396 @@
+@import url('https://fonts.cdnfonts.com/css/mirage-2');
+@import url('https://fonts.cdnfonts.com/css/love-moment-2');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Gloock&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+.swan *{box-sizing:border-box; transition:all .6s ease; scrollbar-width:auto;}
+
+.swan *::-webkit-scrollbar {
+  width: 3px;
+}
+
+.swan *::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.5);
+  border-radius: 5px;
+}
+
+.swan *::-webkit-scrollbar-thumb {
+  background: var(--gradient);
+  border-radius: 5px;
+  
+}
+.swan{
+  width:1000px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  border-radius:10px;
+  overflow:hidden;
+  
+  --headbg:url('https://i.imgur.com/EbEcWgl.png');
+  --infobg:url('https://i.imgur.com/7OLQyka.png');
+  --uabg:url('https://i.imgur.com/bDSFNh1.png');
+  --font:"Inter";
+  --serif:"DM Serif Display";
+  --script:"";
+  --letter:"Love moment";
+  --darkbg:#060606;
+  --fontcolor:#e4e4e4;
+  --general:#5f4f75;
+  --alter:#ccb5ed;
+  --gradient:linear-gradient(180deg,var(--general),var(--alter));
+  --gradient2:linear-gradient(90deg,var(--general),var(--alter));
+  
+  background-color:var(--darkbg);
+  color:var(--fontcolor);
+  font-family:var(--font);
+}
+
+.swan_head{
+  background-image:var(--headbg);
+  width:1000px;
+  height:670px;
+  position:relative;
+  display:flex;
+  align-items: center;
+  flex-direction:column;
+}
+
+.swan_title{
+  color:transparent;
+  font-size:120px;
+  font-family:var(--script);
+  text-transform:uppercase;
+  -webkit-text-stroke:1px var(--general);
+  text-align:center;
+  mix-blend-mode:color-burn;
+  margin-top:320px;
+}
+
+.swan_pseudo{
+  color:#fff;
+  font-size:130px;
+  font-family:var(--letter);
+  text-align:center;
+  margin-top:-130px;
+  margin-left:-200px;
+  text-shadow:1px 1px 2px var(--darkbg);
+  mix-blend-mode:overlay;
+  
+}
+
+.swan_head:hover .swan_render{transform:translateY(5px)}
+.swan_head:hover .swan_title{transform:translateY(-20px)}
+.swan_head:hover .swan_pseudo{transform:translateY(20px)}
+.swan_head:hover .swan_quote{
+  transform:translateX(-10px);
+}
+
+.swan_infos{
+  background-image:var(--infobg);
+  height:590px;
+  width:1000px;
+  position:relative;
+}
+
+.swan_quote{
+  font-family:var(--serif);
+  font-style:italic;
+  font-size:30px;
+  text-align:right;
+  padding:0 50px 0 300px;
+  line-height:22px;
+}
+
+.swan_pops{
+  text-transform:uppercase;
+  font-size:11px;
+  display:flex;
+  padding-left:50px;
+}
+
+.swan_pops span{
+  border-right:2px solid var(--general);
+  padding:5px 10px;
+  border-image:linear-gradient(180deg,var(--general),var(--alter)) 1;
+}
+.swan_pops span:nth-child(3){
+  border:0px solid transparent;
+}
+
+@property --angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes rotate{
+  0% {
+    --angle:0deg;
+  }
+  
+  100% {
+    --angle:-360deg;
+  }
+}
+
+.swan_borderbg{
+  width:100%;
+  height:100%;
+  background-image:var(--infobg);
+  background-position: -52px -75px;  
+  position:relative;
+  overflow:hidden;
+}
+
+.swan_border{
+  background-image: conic-gradient(from var(--angle),var(--general),var(--alter),transparent 80%);
+  animation:rotate 6s normal linear infinite;
+  width:480px;
+  height:350px;
+  margin:50px 0 0 50px;
+  padding:1px;
+}
+
+.swan_content{
+  background:rgba(0,0,0,0.2);
+  backdrop-filter:blur(2px);
+  position:absolute;
+  inset:0;
+  padding:20px;
+}
+
+.swan_content .overflow{
+  height:308px;
+  overflow:auto;
+  padding-right:10px;
+  font-size:12px;
+  line-height:14px;
+  text-align:justify;
+}
+
+.swan c{
+  color:transparent;
+  background:var(--gradient2);
+  -webkit-background-clip:text;  
+}
+
+.swan_infos:hover .swan_pops span{padding:5px 15px;}
+.swan_infos:hover .swan_quote2 span{letter-spacing:3px;}
+
+.swan_quote2 span:nth-child(1){
+  font-family:var(--script);
+  text-transform:uppercase;
+  font-size:180px;
+  text-align:center;
+  color:var(--darkbg);
+  -webkit-text-stroke:3px transparent;
+  margin-top:40px;
+  background:var(--gradient2);
+  -webkit-background-clip:text;
+  position:absolute;
+  mix-blend-mode:lighten;
+}
+.swan_quote2{
+  font-family:var(--script);
+  text-transform:uppercase;
+  font-size:180px;
+  text-align:center;
+  color:rgba(0,0,0,0.6);
+  margin-top:40px;
+  display:flex;
+  justify-content: center;
+    align-items: flex-end;
+}
+
+.swan_ua{
+  width:1000px;
+  height:553px;
+  background-image:var(--uabg);
+  
+  padding:50px 50px 50px 300px;
+  display:grid;
+  grid-template-columns:570px 50px;
+  gap:30px;
+  justify-items: center;
+}
+
+.swan input{display:none}
+
+.swan_labels{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  z-index:9;
+  position:relative;
+      justify-content: flex-end;
+    padding-bottom: 15px;
+}
+
+.swan_labels label{
+  width:50px;
+  height:50px;  
+  cursor:pointer;  
+}
+
+.swan_labels label .border{
+  width:50px;
+  height:50px;
+  background-image: conic-gradient(from var(--angle),var(--fontcolor),var(--fontcolor));
+  position:relative;
+  opacity:.5;
+}
+
+.swan_labels label .border div{
+  background:var(--darkbg);
+  position:absolute;
+  inset:1px;
+  display:flex;
+  overflow:hidden;
+}
+
+.swan_labels label div span{
+ height:48px;
+  display:flex;
+  white-space:nowrap;
+  align-items: center;
+  font-size:20px;
+  font-family:var(--serif);
+  text-transform:uppercase;
+  background:var(--gradient2);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+.swan_labels label span ion-icon{
+  width:28px;
+  height:28px;
+  padding:10px;  
+  color:var(--fontcolor);
+}
+
+.swan_labels label#sua1:hover .border{
+  width:128px;
+  transform:translateX(-78px);
+  opacity:1;
+}
+.swan_labels label#sua2:hover .border{
+  width:142px;
+  transform:translateX(-92px);
+  opacity:1;
+}
+.swan_labels label#sua3:hover .border{
+  width:120px;
+  transform:translateX(-70px);
+  opacity:1;
+}
+.swan_labels label#sua4:hover .border{
+  width:143px;
+  transform:translateX(-93px);
+  opacity:1;
+}
+
+.swan_labels label:hover .border div span{
+  transform:translateX(-38px);
+}
+
+#sua1:checked ~ .swan_labels label#sua1 .border,
+#sua2:checked ~ .swan_labels label#sua2 .border,
+#sua3:checked ~ .swan_labels label#sua3 .border,
+#sua4:checked ~ .swan_labels label#sua4 .border,
+.swan_labels label:hover .border{
+  background-image: conic-gradient(from var(--angle),var(--general),var(--alter),transparent 80%);
+  animation:rotate 6s normal linear infinite;
+  opacity:1;
+}
+
+#sua1:checked ~ .swan_labels #sua1 ion-icon,
+#sua2:checked ~ .swan_labels #sua2 ion-icon,
+#sua3:checked ~ .swan_labels #sua3 ion-icon,
+#sua4:checked ~ .swan_labels #sua4 ion-icon{
+  color:var(--general);
+}
+
+.swan_pages{
+  position:relative;
+  width:100%;
+  height:100%;
+}
+
+.swan_page{
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  opacity:0;
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  padding-top:15px;
+}
+
+#sua1:checked ~ .swan_pages #sua1,
+#sua2:checked ~ .swan_pages #sua2,
+#sua3:checked ~ .swan_pages #sua3,
+#sua4:checked ~ .swan_pages #sua4{
+  z-index:2;
+  opacity:1;
+}
+
+.swan_infos2{
+  display:flex;
+  text-transform:uppercase;
+  font-size:11px;
+  transform:translateX(-100px);
+}
+
+.swan_infos2 span{
+  padding:5px 10px;
+  border-right:2px solid;
+  border-image:var(--gradient2) 1;
+}
+
+.swan_infos2 span:last-child{
+  border-right:0px solid transparent;
+}
+
+.swan_facts{
+  background-image: conic-gradient(from var(--angle),var(--general),var(--alter),transparent 80%);
+  animation:rotate 6s normal linear infinite;
+  position:relative;
+  margin-top:25px;
+  width:570px;
+  height:350px;
+  transform:translateX(-100px);
+}
+
+.swan_infos2:nth-child(2){
+  transform:translateX(100px);
+}
+
+.swan_factsbg{
+  position:absolute;
+  inset:1px;
+  background-image:var(--uabg);
+  background-position: -300px -138px;
+}
+
+.swan_factsbg2{
+  position:absolute;
+  inset:0;
+  background:#0b10149c;
+  backdrop-filter:blur(2px);
+}
+
+.swan_factsbg2 .overflow{
+  position:absolute;
+  inset:20px;
+  overflow:auto;
+  padding-right:10px;
+  text-align:justify;
+  font-size:12px;
+  line-height:14px;
+}
+
+#sua1:checked ~ .swan_pages #sua1 .swan_infos2,#sua1:checked ~ .swan_pages #sua1 .swan_facts,
+#sua2:checked ~ .swan_pages #sua2 .swan_infos2,#sua2:checked ~ .swan_pages #sua2 .swan_facts,
+#sua3:checked ~ .swan_pages #sua3 .swan_infos2,#sua3:checked ~ .swan_pages #sua3 .swan_facts,
+#sua4:checked ~ .swan_pages #sua4 .swan_infos2,#sua4:checked ~ .swan_pages #sua4 .swan_facts{transform:translateX(0);}
